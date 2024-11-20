@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <SchemaModules>
+    <SchemaModule Name="SystemAspNetModule" Version="23.1.3.0" IsNewNode="True" />
+    <SchemaModule Name="SystemModule" Version="23.1.3.0" IsNewNode="True" />
+  </SchemaModules>
+  <Views>
+    <ListView Id="AssignTo_ListView">
+      <Columns>
+        <ColumnInfo Id="Employee" Width="74" />
+        <ColumnInfo Id="Task" Width="73" />
+      </Columns>
+    </ListView>
+    <ListView Id="Department_Employees_ListView">
+      <Columns>
+        <ColumnInfo Id="Title" Width="56" />
+        <ColumnInfo Id="IsActive" Width="64" />
+        <ColumnInfo Id="UserName" Width="78" />
+        <ColumnInfo Id="ChangePasswordOnFirstLogon" Width="195" />
+        <ColumnInfo Id="Fullname" Width="0" />
+        <ColumnInfo Id="MiddleName" Width="87" />
+        <ColumnInfo Id="FirstName" Width="72" />
+        <ColumnInfo Id="LastName" Width="71" />
+        <ColumnInfo Id="Email" Width="49" />
+        <ColumnInfo Id="AddressEmp" Width="84" />
+        <ColumnInfo Id="PhoneEmp" Width="108" />
+        <ColumnInfo Id="Manager" Width="108" />
+        <ColumnInfo Id="Position" Width="64" />
+        <ColumnInfo Id="DateIn" Width="93" />
+        <ColumnInfo Id="DateOut" Width="96" />
+      </Columns>
+    </ListView>
+    <ListView Id="Department_ListView">
+      <Columns>
+        <ColumnInfo Id="TopOrganization" Width="112" Index="-1" />
+        <ColumnInfo Id="Title" Width="114" SortOrder="Ascending" Index="0" />
+        <ColumnInfo Id="Organization" Width="86" Index="1" />
+        <ColumnInfo Id="Office" Width="124" Index="2" />
+        <ColumnInfo Id="ManagerDepartment" Width="128" Index="3" />
+      </Columns>
+    </ListView>
+    <ListView Id="Employee_ListView" ImageName="BO_Employee">
+      <Columns>
+        <ColumnInfo Id="ChangePasswordOnFirstLogon" Index="-1" />
+        <ColumnInfo Id="FirstName" Index="-1" />
+        <ColumnInfo Id="IsActive" Index="-1" />
+        <ColumnInfo Id="LastName" Index="-1" />
+        <ColumnInfo Id="Manager" Index="-1" Width="108" />
+        <ColumnInfo Id="MiddleName" Index="-1" />
+        <ColumnInfo Id="Title" SortOrder="None" Index="-1" SortIndex="-1" />
+        <ColumnInfo Id="UserName" Index="0" SortIndex="0" SortOrder="Ascending" Width="91" />
+        <ColumnInfo Id="Fullname" Index="1" SortIndex="-1" SortOrder="None" Width="0" />
+        <ColumnInfo Id="Email" Index="2" Width="49" />
+        <ColumnInfo Id="AddressEmp" Index="3" Width="84" />
+        <ColumnInfo Id="PhoneEmp" Index="4" Width="108" />
+        <ColumnInfo Id="Department" Index="5" Width="127" />
+        <ColumnInfo Id="Position" Index="6" Width="64" />
+        <ColumnInfo Id="DateIn" Index="7" Width="93" />
+        <ColumnInfo Id="DateOut" Index="8" Width="96" />
+      </Columns>
+    </ListView>
+    <ListView Id="EmployeeRole_Employees_ListView">
+      <Columns>
+        <ColumnInfo Id="Title" Width="56" />
+        <ColumnInfo Id="IsActive" Width="64" />
+        <ColumnInfo Id="UserName" Width="78" />
+        <ColumnInfo Id="ChangePasswordOnFirstLogon" Width="195" />
+        <ColumnInfo Id="Fullname" Width="0" />
+        <ColumnInfo Id="MiddleName" Width="87" />
+        <ColumnInfo Id="FirstName" Width="72" />
+        <ColumnInfo Id="LastName" Width="71" />
+        <ColumnInfo Id="Email" Width="49" />
+        <ColumnInfo Id="AddressEmp" Width="84" />
+        <ColumnInfo Id="PhoneEmp" Width="108" />
+        <ColumnInfo Id="Manager" Width="108" />
+        <ColumnInfo Id="Department" Width="127" />
+        <ColumnInfo Id="Position" Width="64" />
+        <ColumnInfo Id="DateIn" Width="93" />
+        <ColumnInfo Id="DateOut" Width="96" />
+      </Columns>
+    </ListView>
+    <ListView Id="EmployeeRole_ListView">
+      <Columns>
+        <ColumnInfo Id="Name" Width="65" />
+        <ColumnInfo Id="IsAdministrative" Width="108" />
+        <ColumnInfo Id="CanEditModel" Width="101" />
+      </Columns>
+    </ListView>
+    <ListView Id="Organization_ListView">
+      <Columns>
+        <ColumnInfo Id="OrganizationName" Width="118" />
+        <ColumnInfo Id="Office" Width="67" />
+      </Columns>
+    </ListView>
+    <ListView Id="Position_ListView">
+      <Columns>
+        <ColumnInfo Id="Title" Width="97" />
+        <ColumnInfo Id="PositionLevel" Width="97" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Task_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="6.25">
+            <LayoutGroup Id="Task" Caption="Task" RelativeSize="100">
+              <LayoutItem Id="Title" RelativeSize="100" />
+              <LayoutItem Id="DueDate" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" RelativeSize="36.8421052631579" Caption="Mô tả công việc">
+            <LayoutItem Id="Description" RelativeSize="86.607142857142861" />
+            <LayoutItem Id="DueDate" ViewItem="DueDate" Index="1" RelativeSize="13.392857142857142" SizeConstraintsType="Default" MinSize="772, 190" MaxSize="772, 190" IsNewNode="True" />
+          </LayoutGroup>
+          <LayoutGroup Id="AssignedTo_Group" Direction="Vertical" RelativeSize="56.9078947368421">
+            <LayoutItem Id="AssignedTo" RelativeSize="100" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Task_ListView">
+      <Columns>
+        <ColumnInfo Id="Title" SortOrder="None" Width="93" SortIndex="-1" />
+        <ColumnInfo Id="Description" Index="1" Width="118" SortIndex="0" SortOrder="Ascending" />
+        <ColumnInfo Id="DueDate" Width="88" />
+      </Columns>
+    </ListView>
+  </Views>
+</Application>
